@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  pgbouncer:
+    image: z9pascal/pgbouncer
+    environment:
+      - PG_ENV_POSTGRESQL_USER=pgbouncer
+      - PG_ENV_POSTGRESQL_PASS=pgbouncer
+    ports:
+      - "6432:6432"
