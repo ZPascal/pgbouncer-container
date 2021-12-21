@@ -25,8 +25,6 @@ RUN apk --update add autoconf autoconf-doc automake udns udns-dev curl gcc libc-
     chmod +x /usr/local/bin/run /usr/bin/pgbouncer && \
     # Create the necessary folders
     mkdir -p /etc/pgbouncer /var/log/pgbouncer /var/run/pgbouncer && \
-    # Create custom user and set teh access rights
-    addgroup -S -g 500 postgres && adduser -S -u 500 -G postgres -h /home/postgres postgres && \
     chown -R postgres:postgres /var/run/pgbouncer /etc/pgbouncer /var/log/pgbouncer && \
     # Cleanup
     cd /tmp && \
