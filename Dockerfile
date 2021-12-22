@@ -1,11 +1,11 @@
-FROM alpine:3.13
-ARG VERSION=1.15.0
+FROM alpine:3.15
+ARG VERSION=1.16.1
 MAINTAINER Pascal Zimmermann <ZPascal>
 LABEL application="PgBouncer" \
       description="Base alpine linux container image + PgBouncer" \
-      version="1.15" \
+      version="1.16.1" \
       lastModifiedBy="Pascal Zimmermann" \
-      lastModifiedOn="2021-05-05"
+      lastModifiedOn="2021-12-20"
 
 ENV PG_ENV_POSTGRESQL_MAX_CLIENT_CONN 10000
 ENV PG_ENV_POSTGRESQL_DEFAULT_POOL_SIZE 400
@@ -25,8 +25,6 @@ RUN apk --update add autoconf autoconf-doc automake udns udns-dev curl gcc libc-
     chmod +x /usr/local/bin/run /usr/bin/pgbouncer && \
     # Create the necessary folders
     mkdir -p /etc/pgbouncer /var/log/pgbouncer /var/run/pgbouncer && \
-    # Create custom user and set teh access rights
-    addgroup -S -g 500 postgres && adduser -S -u 500 -G postgres -h /home/postgres postgres && \
     chown -R postgres:postgres /var/run/pgbouncer /etc/pgbouncer /var/log/pgbouncer && \
     # Cleanup
     cd /tmp && \
