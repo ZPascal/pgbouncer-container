@@ -5,8 +5,8 @@
 - https://github.com/mbentley/dockerfiles
 
 ## Used versions
-- [alpine:3.13](https://hub.docker.com/_/alpine)
-- [pgBouncer 1.15](https://github.com/pgbouncer/pgbouncer/releases/tag/pgbouncer_1_15_0)
+- [alpine:3.15](https://hub.docker.com/_/alpine)
+- [pgBouncer 1.16.1](https://github.com/pgbouncer/pgbouncer/releases/tag/pgbouncer_1_16_1)
 
 ## Supported setup parameter
 | Env variable | Default value | Example value | Required |
