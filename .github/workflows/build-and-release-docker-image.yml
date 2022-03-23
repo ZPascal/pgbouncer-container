@@ -1,0 +1,23 @@
+name: Build and release the docker image
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Extract the release version
+      run: version=$(cat ./Dockerfile | grep -Po 'version="\K.*?(?=")')
+
+    - name: Build the Docker image
+      run: docker build . -t z9pascal/pgbouncer-container:${version}-latest
+
+    - name: Relase the Docker image
+      run: echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u z9pascal --password-stdin && docker push z9pascal/pgbouncer-container:${version}-latest
