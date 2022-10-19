@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Extract the release version
-      run: version=$(cat ./Dockerfile | grep -Po 'version="\K.*?(?=")')
+      run: export VERSION=$(cat ./Dockerfile | grep -Po 'version="\K.*?(?=")')
 
     - name: Build the Docker image
-      run: docker build . -t z9pascal/pgbouncer-container:${version}-latest
+      run: docker build . -t z9pascal/pgbouncer-container:${VERSION}-latest
 
     - name: Relase the Docker image
-      run: echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u z9pascal --password-stdin && docker push z9pascal/pgbouncer-container:${version}-latest
+      run: echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u z9pascal --password-stdin && docker push z9pascal/pgbouncer-container:${VERSION}-latest
