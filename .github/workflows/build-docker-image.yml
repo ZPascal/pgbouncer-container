@@ -14,5 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag pgbouncer-container:$(date +%s)
+      run: docker build . --file Dockerfile --tag pgbouncer-container:$(cat ./Dockerfile | grep -Po 'version="\K.*?(?=")')-$(date +%s)
