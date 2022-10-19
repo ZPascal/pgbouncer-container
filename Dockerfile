@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.16
 ARG VERSION=1.17.0
 MAINTAINER Pascal Zimmermann <ZPascal>
 LABEL application="PgBouncer" \
