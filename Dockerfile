@@ -1,11 +1,11 @@
 FROM alpine:3.17
-ARG VERSION=1.19.0
+ARG VERSION=1.19.1
 MAINTAINER Pascal Zimmermann <ZPascal>
 LABEL application="PgBouncer" \
       description="Base alpine linux container image + PgBouncer" \
-      version="1.19.0" \
+      version="1.19.1" \
       lastModifiedBy="Pascal Zimmermann" \
-      lastModifiedOn="2023-05-04"
+      lastModifiedOn="2023-05-31"
 
 ENV PG_ENV_POSTGRESQL_MAX_CLIENT_CONN 10000
 ENV PG_ENV_POSTGRESQL_DEFAULT_POOL_SIZE 400
