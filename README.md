@@ -6,7 +6,7 @@
 
 ## Used versions
 - [alpine:3.17](https://hub.docker.com/_/alpine)
-- [pgBouncer 1.19.0](https://github.com/pgbouncer/pgbouncer/releases/tag/pgbouncer_1_19_0)
+- [pgBouncer 1.19.1](https://github.com/pgbouncer/pgbouncer/releases/tag/pgbouncer_1_19_1)
 
 ## Supported setup parameter
 | Env variable | Default value | Example value | Required |
