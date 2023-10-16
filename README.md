@@ -6,7 +6,7 @@
 
 ## Used versions
 - [alpine:3.18](https://hub.docker.com/_/alpine)
-- [pgBouncer 1.20.1](https://github.com/pgbouncer/pgbouncer/releases/tag/pgbouncer_1_20_1)
+- [pgBouncer 1.21.0](https://github.com/pgbouncer/pgbouncer/releases/tag/pgbouncer_1_21_0)
 
 ## Supported setup parameter
 | Env variable | Default value | Example value | Required |
@@ -21,7 +21,7 @@
 | PG_ENV_POSTGRESQL_POOL_MODE | session | session | No |
 
 ## Functionality
-The run script creates automatically the corresponding configuration, add the set the ```PG_ENV_POSTGRESQL_USER``` variable as stats_user inside the PgBouncer configuration. After the preparation step, the run script starts pgbouncer automatically and the container bound the port ```6432``` to share the PgBouncer service.
+The run script creates automatically the corresponding configuration and sets the ```PG_ENV_POSTGRESQL_USER``` variable as stats_user inside the PgBouncer configuration. After the preparation step, the run script starts pgbouncer automatically and the container bound the port ```6432``` to share the PgBouncer service.
 
 
 ## Docker-compose example
