@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.title="PgBouncer" \
       org.opencontainers.image.version="${VERSION}" \
       org.opencontainers.image.authors="Pascal Zimmermann <pascal.zimmermann@theiotstudio.com>" \
       lastUpdatedBy="Pascal Zimmermann" \
-      lastUpdatedOn="2025-01-10"
+      lastUpdatedOn="2025-04-05"
 
 ENV PG_ENV_POSTGRESQL_MAX_CLIENT_CONN 10000
 ENV PG_ENV_POSTGRESQL_DEFAULT_POOL_SIZE 400
