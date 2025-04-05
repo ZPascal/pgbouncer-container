@@ -3,7 +3,7 @@ ARG VERSION=1.24.0
 
 LABEL org.opencontainers.image.title="PgBouncer" \
       org.opencontainers.image.description="Base alpine linux container image & PgBouncer" \
-      org.opencontainers.image.version="${VERSION}" \
+      org.opencontainers.image.version="1.24.0" \
       org.opencontainers.image.authors="Pascal Zimmermann <pascal.zimmermann@theiotstudio.com>" \
       lastUpdatedBy="Pascal Zimmermann" \
       lastUpdatedOn="2025-04-05"
