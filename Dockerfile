@@ -1,12 +1,12 @@
 FROM alpine:3.21
-ARG VERSION=1.24.0
+ARG VERSION=1.24.1
 
 LABEL org.opencontainers.image.title="PgBouncer" \
       org.opencontainers.image.description="Base alpine linux container image & PgBouncer" \
-      org.opencontainers.image.version="1.24.0" \
+      org.opencontainers.image.version="1.24.1" \
       org.opencontainers.image.authors="Pascal Zimmermann <pascal.zimmermann@theiotstudio.com>" \
       lastUpdatedBy="Pascal Zimmermann" \
-      lastUpdatedOn="2025-04-05"
+      lastUpdatedOn="2025-04-16"
 
 ENV PG_ENV_POSTGRESQL_MAX_CLIENT_CONN 10000
 ENV PG_ENV_POSTGRESQL_DEFAULT_POOL_SIZE 400
