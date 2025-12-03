@@ -1,12 +1,12 @@
 FROM alpine:3.22
-ARG VERSION=1.24.1
+ARG VERSION=1.25.1
 
 LABEL org.opencontainers.image.title="PgBouncer" \
       org.opencontainers.image.description="Base alpine linux container image & PgBouncer" \
-      org.opencontainers.image.version="1.24.1" \
+      org.opencontainers.image.version="1.25.1" \
       org.opencontainers.image.authors="Pascal Zimmermann <pascal.zimmermann@theiotstudio.com>" \
       lastUpdatedBy="Pascal Zimmermann" \
-      lastUpdatedOn="2025-04-16"
+      lastUpdatedOn="2025-12-03"
 
 ENV PG_ENV_POSTGRESQL_MAX_CLIENT_CONN 10000
 ENV PG_ENV_POSTGRESQL_DEFAULT_POOL_SIZE 400
@@ -16,7 +16,7 @@ ENV PG_ENV_POSTGRESQL_POOL_MODE session
 ADD run.sh /usr/local/bin/run
 
 RUN apk --update add autoconf autoconf-doc automake udns udns-dev curl gcc libc-dev libevent libevent-dev libtool \
-    make openssl-dev pkgconfig postgresql-client && \
+    make openssl-dev pkgconfig postgresql-client pandoc-cli && \
     # Download the PgBouncer version, unpack, compile and install
     curl -o  /tmp/pgbouncer-$VERSION.tar.gz \
     -L https://pgbouncer.github.io/downloads/files/$VERSION/pgbouncer-$VERSION.tar.gz && \
