@@ -1,4 +1,4 @@
-FROM alpine:3.22
+FROM alpine:3.23
 ARG VERSION=1.25.1
 
 LABEL org.opencontainers.image.title="PgBouncer" \
