@@ -1,9 +1,9 @@
 FROM alpine:3.23
-ARG VERSION=1.25.1
+ARG VERSION=1.25.2
 
 LABEL org.opencontainers.image.title="PgBouncer" \
       org.opencontainers.image.description="Base alpine linux container image & PgBouncer" \
-      org.opencontainers.image.version="1.25.1" \
+      org.opencontainers.image.version="1.25.2" \
       org.opencontainers.image.authors="Pascal Zimmermann <pascal.zimmermann@theiotstudio.com>" \
       lastUpdatedBy="Pascal Zimmermann" \
       lastUpdatedOn="2025-12-03"
